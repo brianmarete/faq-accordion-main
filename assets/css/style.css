@@ -48,10 +48,10 @@ body {
   background-color: hsl(0, 0%, 100%);
   box-shadow: 10px 15px 31px 0px rgba(0, 0, 0, 0.1);
 }
-.container .faq header {
+.container .faq .background-img-container {
   display: flex;
 }
-.container .faq header h1 {
+.container .faq .background-img-container h1 {
   margin: 0.5rem 0 0.5rem 1rem;
   font-family: WorkSans-bold, sans-serif;
   font-size: 3em;
