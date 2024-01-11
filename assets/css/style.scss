@@ -26,29 +26,37 @@ $dark-purple: hsl(292, 42%, 14%);
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
   height: 100%;
   font-size: 16px;
 }
 
 body {
   background-color: $light-pink;
-  background-image: url("../images/background-pattern-desktop.svg");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 100%;
 }
 
 .container {
-  @include center-align;
-  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .img-container {
+    width: 100%;
+    height: 40vh;
+    background-image: url("../images/background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+  }
 
   .faq {
+    transform: translateY(-15vh);
     width: 550px;
     border-radius: 0.8rem;
     padding: 1.5rem 2rem;
@@ -82,6 +90,7 @@ body {
         justify-content: space-between;
         width: 100%;
         cursor: pointer;
+        transition: all 0.3s ease;
 
         p:hover {
           color: #ad28eb;
@@ -97,34 +106,60 @@ body {
       }
 
       .answer {
-        display: none;
         font-family: WorkSans, sans-serif;
         color: $grayish-purple;
-        margin-top: 1rem;
         width: 100%;
-        // height: 5rem;
+        margin-top: 1rem;
         line-height: 1.6;
+        opacity: 0;
+        max-height: 0;
         overflow: hidden;
+        transition: opacity 0.3s ease, max-height 0.3s ease;
 
         &.active {
-          display: block;
+          opacity: 1;
+          max-height: 250px;
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 615px) {
   body {
     font-size: 14px;
-    background-image: url("../images/background-pattern-mobile.svg");
-    background-repeat: no-repeat;
-    background-position: top;
   }
 
   .container {
+    .img-container {
+      background-image: url("../images/background-pattern-mobile.svg");
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+
     .faq {
-      width: 280px;
+      transform: translateY(-25vh);
+      width: 70%;
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 973px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    .img-container {
+      height: 40vh;
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+
+    .faq {
+      transform: translateY(-25vh);
+      // width: 280px;
       margin-top: 0;
     }
   }
