@@ -24,6 +24,10 @@ $dark-purple: hsl(292, 42%, 14%);
   align-items: center;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
@@ -55,7 +59,7 @@ body {
       display: flex;
 
       h1 {
-        margin: 0.5rem 0 0 1rem;
+        margin: 0.5rem 0 0.5rem 1rem;
         font-family: WorkSans-bold, sans-serif;
         font-size: 3em;
       }
@@ -65,7 +69,6 @@ body {
       padding: 1rem 0;
       border-bottom: 1px solid $light-pink;
       width: 100%;
-      overflow: hidden;
 
       &:last-child {
         border-bottom: none;
@@ -99,8 +102,9 @@ body {
         color: $grayish-purple;
         margin-top: 1rem;
         width: 100%;
-        transition: opacity 0.3s ease-in;
+        // height: 5rem;
         line-height: 1.6;
+        overflow: hidden;
 
         &.active {
           display: block;
@@ -110,7 +114,7 @@ body {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
   body {
     font-size: 14px;
     background-image: url("../images/background-pattern-mobile.svg");
@@ -121,6 +125,7 @@ body {
   .container {
     .faq {
       width: 280px;
+      margin-top: 0;
     }
   }
 }

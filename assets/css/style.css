@@ -10,6 +10,10 @@
   font-family: WorkSans-bold;
   src: url("../fonts/static/WorkSans-Bold.ttf");
 }
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
@@ -43,7 +47,7 @@ body {
   display: flex;
 }
 .container .faq header h1 {
-  margin: 0.5rem 0 0 1rem;
+  margin: 0.5rem 0 0.5rem 1rem;
   font-family: WorkSans-bold, sans-serif;
   font-size: 3em;
 }
@@ -51,7 +55,6 @@ body {
   padding: 1rem 0;
   border-bottom: 1px solid hsl(275, 100%, 97%);
   width: 100%;
-  overflow: hidden;
 }
 .container .faq .accordion-item:last-child {
   border-bottom: none;
@@ -80,14 +83,14 @@ body {
   color: hsl(292, 16%, 49%);
   margin-top: 1rem;
   width: 100%;
-  transition: opacity 0.3s ease-in;
   line-height: 1.6;
+  overflow: hidden;
 }
 .container .faq .accordion-item .answer.active {
   display: block;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
   body {
     font-size: 14px;
     background-image: url("../images/background-pattern-mobile.svg");
@@ -96,6 +99,7 @@ body {
   }
   .container .faq {
     width: 280px;
+    margin-top: 0;
   }
 }
 .attribution {
