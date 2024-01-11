@@ -1,0 +1,107 @@
+@font-face {
+  font-family: WorkSans;
+  src: url("../fonts/static/WorkSans-Regular.ttf");
+}
+@font-face {
+  font-family: WorkSans-semi-bold;
+  src: url("../fonts/static/WorkSans-SemiBold.ttf");
+}
+@font-face {
+  font-family: WorkSans-bold;
+  src: url("../fonts/static/WorkSans-Bold.ttf");
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  background-color: hsl(275, 100%, 97%);
+  background-image: url("../images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container .faq {
+  width: 550px;
+  border-radius: 0.8rem;
+  padding: 1.5rem 2rem;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 10px 15px 31px 0px rgba(0, 0, 0, 0.1);
+}
+.container .faq header {
+  display: flex;
+}
+.container .faq header h1 {
+  margin: 0.5rem 0 0 1rem;
+  font-family: WorkSans-bold, sans-serif;
+  font-size: 3em;
+}
+.container .faq .accordion-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+  width: 100%;
+  overflow: hidden;
+}
+.container .faq .accordion-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.container .faq .accordion-item .question {
+  font-family: WorkSans-semi-bold, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+.container .faq .accordion-item .question p:hover {
+  color: #ad28eb;
+}
+.container .faq .accordion-item .question img {
+  display: none;
+}
+.container .faq .accordion-item .question img.active {
+  display: block;
+}
+.container .faq .accordion-item .answer {
+  display: none;
+  font-family: WorkSans, sans-serif;
+  color: hsl(292, 16%, 49%);
+  margin-top: 1rem;
+  width: 100%;
+  transition: opacity 0.3s ease-in;
+  line-height: 1.6;
+}
+.container .faq .accordion-item .answer.active {
+  display: block;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 14px;
+    background-image: url("../images/background-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  .container .faq {
+    width: 280px;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */

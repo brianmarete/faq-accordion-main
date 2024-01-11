@@ -1,0 +1,135 @@
+$white: hsl(0, 0%, 100%);
+$light-pink: hsl(275, 100%, 97%);
+$grayish-purple: hsl(292, 16%, 49%);
+$dark-purple: hsl(292, 42%, 14%);
+
+@font-face {
+  font-family: WorkSans;
+  src: url("../fonts/static/WorkSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: WorkSans-semi-bold;
+  src: url("../fonts/static/WorkSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: WorkSans-bold;
+  src: url("../fonts/static/WorkSans-Bold.ttf");
+}
+
+@mixin center-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  background-color: $light-pink;
+  background-image: url("../images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+}
+
+.container {
+  @include center-align;
+  height: 100vh;
+
+  .faq {
+    width: 550px;
+    border-radius: 0.8rem;
+    padding: 1.5rem 2rem;
+    background-color: $white;
+    box-shadow: 10px 15px 31px 0px rgba(0, 0, 0, 0.1);
+
+    header {
+      display: flex;
+
+      h1 {
+        margin: 0.5rem 0 0 1rem;
+        font-family: WorkSans-bold, sans-serif;
+        font-size: 3em;
+      }
+    }
+
+    .accordion-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid $light-pink;
+      width: 100%;
+      overflow: hidden;
+
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .question {
+        font-family: WorkSans-semi-bold, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        cursor: pointer;
+
+        p:hover {
+          color: #ad28eb;
+        }
+
+        img {
+          display: none;
+
+          &.active {
+            display: block;
+          }
+        }
+      }
+
+      .answer {
+        display: none;
+        font-family: WorkSans, sans-serif;
+        color: $grayish-purple;
+        margin-top: 1rem;
+        width: 100%;
+        transition: opacity 0.3s ease-in;
+        line-height: 1.6;
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 14px;
+    background-image: url("../images/background-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .container {
+    .faq {
+      width: 280px;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}

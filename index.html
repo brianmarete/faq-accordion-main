@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Frontend Mentor | FAQ accordion</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="faq">
+        <header>
+          <img src="./assets/images/icon-star.svg" alt="" />
+          <h1>FAQs</h1>
+        </header>
+        <div class="accordion-item">
+          <div
+            class="question"
+            role="button"
+            aria-expanded="false"
+            aria-controls="section1"
+            tabindex="1"
+          >
+            <p>What is Frontend Mentor, and how will it help me?</p>
+            <div>
+              <img src="./assets/images/icon-plus.svg" alt="" class="active" />
+              <img src="./assets/images/icon-minus.svg" alt="" />
+            </div>
+          </div>
+          <div class="answer" id="section1" tabindex="-1">
+            Frontend Mentor offers realistic coding challenges to help
+            developers improve their frontend coding skills with projects in
+            HTML, CSS, and JavaScript. It's suitable for all levels and ideal
+            for portfolio building.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div
+            class="question"
+            role="button"
+            aria-expanded="false"
+            aria-controls="section2"
+            tabindex="2"
+          >
+            <p>Is Frontend Mentor free?</p>
+            <div>
+              <img src="./assets/images/icon-plus.svg" alt="" class="active" />
+              <img src="./assets/images/icon-minus.svg" alt="" />
+            </div>
+          </div>
+          <div class="answer" id="section2" tabindex="-1">
+            Yes, Frontend Mentor offers both free and premium coding challenges,
+            with the free option providing access to a range of projects
+            suitable for all skill levels.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div
+            class="question"
+            role="button"
+            aria-expanded="false"
+            aria-controls="section3"
+            tabindex="3"
+          >
+            <p>Can I use Frontend Mentor projects in my portfolio?</p>
+            <div>
+              <img src="./assets/images/icon-plus.svg" alt="" class="active" />
+              <img src="./assets/images/icon-minus.svg" alt="" />
+            </div>
+          </div>
+          <div class="answer" id="section3" tabindex="-1">
+            Yes, you can use projects completed on Frontend Mentor in your
+            portfolio. It's an excellent way to showcase your skills to
+            potential employers!
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div
+            class="question"
+            role="button"
+            aria-expanded="false"
+            aria-controls="section4"
+            tabindex="4"
+          >
+            <p>How can I get help if I'm stuck on a challenge?</p>
+            <div>
+              <img src="./assets/images/icon-plus.svg" alt="" class="active" />
+              <img src="./assets/images/icon-minus.svg" alt="" />
+            </div>
+          </div>
+          <div class="answer" id="section4" tabindex="-1">
+            The best place to get help is inside Frontend Mentor's Discord
+            community. There's a help channel where you can ask questions and
+            seek support from other community members.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
